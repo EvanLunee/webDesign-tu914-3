@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+
+        <!-- User actions -->
+        <action name="register" class="userAction" method="register">
+            <result name="success">login.jsp</result>
+            <result name="input">register.jsp</result>
+        </action>
+
+        <action name="login" class="userAction" method="login">
+            <result name="success">index.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+
+        <action name="logout" class="userAction" method="logout">
+            <result name="success">login.jsp</result>
+        </action>
+
+        <action name="viewProfile" class="userAction" method="viewProfile">
+            <result name="success">profile.jsp</result>
+        </action>
+
+        <action name="viewAllUsers" class="userAction" method="viewAllUsers">
+            <result name="success">users.jsp</result>
+        </action>
+
+		<action name="viewOtherProfile" class="userAction" method="viewOtherProfile">
+    		<result name="success">profile.jsp</result>
+		</action>
+
+        <action name="addItem" class="itemAction" method="addItem">
+            <result name="success">items.jsp</result>
+            <result name="input">addItem.jsp</result>
+        </action>
+
+        <action name="viewItems" class="itemAction" method="viewItems">
+            <result name="success">items.jsp</result>
+        </action>
+
+        <action name="makeBid" class="bidAction" method="makeBid">
+            <result name="success">bids.jsp</result>
+            <result name="input">makeBid.jsp</result>
+        </action>
+
+        <action name="viewMyBids" class="bidAction" method="viewMyBids">
+            <result name="success">bids.jsp</result>
+        </action>
+
+        <action name="viewBidsByItem" class="bidAction" method="viewBidsByItem">
+            <result name="success">bids.jsp</result>
+        </action>
+
+    </package>
+</struts>
